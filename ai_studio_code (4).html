@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مولد الشحن المجاني - تجربة</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            text-align: center;
+            padding: 40px 15px;
+            margin: 0;
+        }
+        .container {
+            max-width: 450px;
+            margin: 0 auto;
+            background: #1e1e1e;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.6);
+            border: 1px solid #333;
+        }
+        h1 { color: #4CAF50; font-size: 24px; }
+        p { color: #bbb; font-size: 14px; }
+        select {
+            padding: 12px;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 6px;
+            background: #2a2a2a;
+            color: white;
+            border: 1px solid #444;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 6px;
+            font-weight: bold;
+            width: 100%;
+            transition: 0.3s;
+        }
+        button:hover { background-color: #45a049; }
+        
+        /* كود قفل المحتوى التجريبي */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .locker {
+            background: #ffffff;
+            color: #333333;
+            padding: 25px;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 380px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+        .locker h2 { color: #e74c3c; margin-top: 0; font-size: 20px; }
+        .locker p { color: #555; font-size: 14px; }
+        .offers {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .offer-btn {
+            background: #2980b9;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        .offer-btn:hover { background: #3498db; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>شحن مجاني (نسخة تجريبية)</h1>
+        <p>اختر الكمية التي تريد شحنها واضغط على الزر لبدء التوليد.</p>
+        
+        <select>
+            <option>1,000 نقطة/جوهرة</option>
+            <option>5,000 نقطة/جوهرة</option>
+            <option>10,000 نقطة/جوهرة</option>
+        </select>
+        
+        <button onclick="showLocker()">ابدأ الشحن الآن</button>
+    </div>
+
+    <!-- هذا هو قفل المحتوى (اللوكر التجريبي) -->
+    <div id="lockerOverlay" class="overlay">
+        <div class="locker">
+            <h2>⚠️ مطلوب التحقق البشري!</h2>
+            <p>لتأكيد عملية الشحن وحماية النظام من الضغط، يرجى إكمال أحد العروض المجانية التالية:</p>
+            
+            <div class="offers">
+                <!-- روابط لوكر تجريبية -->
+                <a href="https://example.com/offer1" target="_blank" class="offer-btn">العرض الأول: أدخل رقم هاتفك لتأكيد الشحن</a>
+                <a href="https://example.com/offer2" target="_blank" class="offer-btn">العرض الثاني: قم بتنزيل هذا التطبيق لتأكيد الحساب</a>
+            </div>
+            
+            <span style="font-size: 11px; color: #888;">جاري فحص حالة الإكمال...</span>
+        </div>
+    </div>
+
+    <script>
+        // دالة لإظهار اللوكر عند الضغط على الزر
+        function showLocker() {
+            document.getElementById('lockerOverlay').style.display = 'flex';
+        }
+    </script>
+
+</body>
+</html>
